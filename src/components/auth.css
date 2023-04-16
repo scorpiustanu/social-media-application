@@ -1,0 +1,17 @@
+
+
+.auth-wrapper{
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+}
+
+.auth_inner{
+    width: 50%;
+    height: 70%;
+    margin: auto;
+}
+
+.center{
+   margin-top: 15vh;
+}
