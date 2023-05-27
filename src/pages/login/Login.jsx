@@ -7,48 +7,48 @@ import axios from "axios";
 const Login = () => {
     const { login } = useContext(AuthContext);
 
-    let [inputs,setInputs] = useState({
-        email : "",
-        password : ""
+    let [inputs, setInputs] = useState({
+        email: "",
+        password: ""
     });
 
 
 
     const handleLogin = async () => {
-    
+
         let flag = false;
 
-        await axios.post("http://localhost:8080/api/v1/auth/login",{
-            email: inputs.email ,
-            password:inputs.password
-        },{withCredentials : true}).then((res) => {
+        await axios.post("http://localhost:8080/api/v1/auth/login", {
+            email: inputs.email,
+            password: inputs.password
+        }, { withCredentials: true }).then((res) => {
             console.log(res);
             flag = true;
-            console.log("res "  + res);
-            
+            console.log("res " + res);
+
             // localStorage.setItem("profile",JSON.stringify());
             login(res);
-            
+
         }).catch((err) => {
             console.log("error : " + err);
         });
 
         setInputs({
-            email : "",
-            password : ""
+            email: "",
+            password: ""
         });
 
 
-        if(flag == true){
+        if (flag == true) {
             window.location.href = window.location.origin;
         }
 
     };
 
     const handleChange = (e) => {
-        
+
         setInputs((prev) => (
-            {...prev,[e.target.name] : e.target.value}
+            { ...prev, [e.target.name]: e.target.value }
         ));
 
     }
