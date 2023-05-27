@@ -2,78 +2,80 @@
 
 .navbar {
   @include themify($themes) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    height: 50px;
-    border-bottom: 1px solid themed("border");
-    position: sticky;
-    top: 0;
-    background-color: themed("bg");
-    color:themed("textColor");
-    z-index: 999;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 20px !important;
+    height: 50px !important;
+    border-bottom: 1px solid themed("border") !important;
+    position: sticky !important;
+    top: 0 !important;
+    background-color: themed("bg") !important;
+    color:themed("textColor") !important;
+    z-index: 999 !important;
 
-    .left {
-      display: flex;
-      align-items: center;
-      gap: 30px;
+    margin-bottom: 10px;
+
+    .navbarleft {
+      display: flex !important;
+      align-items: center !important;
+      gap: 30px !important;
 
       span {
-        font-weight: bold;
-        font-size: 20px;
-        color: themed("logo");
+        font-weight: bold !important;
+        font-size: 20px !important;
+        color: themed("logo") !important;
       }
 
       .search {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border: 1px solid themed("border");
-        border-radius: 5px;
-        padding: 5px;
+        display: flex !important;
+        align-items: center  !important;
+        gap: 10px !important;
+        border: 1px solid themed("border") !important;
+        border-radius: 5px !important;
+        padding: 5px !important;
 
         input {
-          border: none;
-          width: 500px;
-          background-color: transparent;
-          color: themed("textColor");
+          border: none !important;
+          width: 500px !important;
+          background-color: transparent !important;
+          color: themed("textColor") !important;
 
           @include mobile{
-            display: none;
+            display: none !important;
           }
 
           @include tablet{
-            width: 200px;
+            width: 200px !important;
           }
         }
       }
     }
 
     .right {
-      display: flex;
-      align-items: center;
+      display: flex !important;
+      align-items: center !important;
       gap: 20px;
 
       @include mobile{
-        display: none;
+        display: none !important;
       }
 
       .user {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 500;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        font-weight: 500 !important;
 
         @include tablet{
-          display: none;
+          display: none !important;
         }
 
         img {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          object-fit: cover;
+          width: 30px !important;
+          height: 30px !important;
+          border-radius: 50% !important;
+          object-fit: cover !important;
         }
 
         span {

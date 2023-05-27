@@ -63,6 +63,7 @@
           flex: 1;
           display: flex;
           gap: 10px;
+          display: none;
 
           @include tablet{
             flex-wrap: wrap;
@@ -78,11 +79,12 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 10px;
+          gap: 2px;
 
           span {
-            font-size: 30px;
+            font-size: 22px;
             font-weight: 500;
+            margin-right: 8px;
           }
 
           .info {
@@ -94,7 +96,7 @@
             .item {
               display: flex;
               align-items: center;
-              gap: 5px;
+              gap: 2px;
               color: themed("textColorSoft");
 
               span {

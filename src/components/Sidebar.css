@@ -1,0 +1,15 @@
+.category-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.category-btn{
+    background-color: black;
+}
+
+.category-btn:hover{
+    background-color: red;
+}

@@ -16,15 +16,12 @@
   
       .left {
         flex: 1;
-        background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-          url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
-            center;
         background-size: cover;
         padding: 50px;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        color: white;
+        color: rgb(9, 9, 9);
   
         h1 {
           font-size: 100px;
@@ -42,8 +39,8 @@
           width: 50%;
           padding: 10px;
           border: none;
-          background-color: white;
-          color: rebeccapurple;
+          background-color: rgb(67, 4, 162);
+          color: rgb(245, 244, 247);
           font-weight: bold;
           cursor: pointer;
         }
@@ -76,7 +73,7 @@
             width: 50%;
             padding: 10px;
             border: none;
-            background-color: #938eef;
+            background-color: #100996;
             color: white;
             font-weight: bold;
             cursor: pointer;

@@ -16,35 +16,41 @@ const Navbar = () => {
     const { toggle, darkMode } = useContext(DarkModeContext);
     const { currentUser } = useContext(AuthContext);
 
+    
+    const user = JSON.parse(localStorage.getItem("user"));
+console.log("userId : "  + user);
     return (
         <div className="navbar">
-            <div className="left">
+            <div className="navbarleft">
                 <Link to="/" style={{ textDecoration: "none" }}>
                     <span>Social Media</span>
                 </Link>
-                <HomeOutlinedIcon />
-                {darkMode ? (
+                
+                {/* <HomeOutlinedIcon /> */}
+                {/* {darkMode ? (
                     <WbSunnyOutlinedIcon onClick={toggle} />
                 ) : (
                     <DarkModeOutlinedIcon onClick={toggle} />
-                )}
-                <GridViewOutlinedIcon />
-                <div className="search">
+                )} */}
+                {/* <GridViewOutlinedIcon /> */}
+                {/* <div className="search">
                     <SearchOutlinedIcon />
                     <input type="text" placeholder="Search..." />
-                </div>
+                </div> */}
             </div>
             <div className="right">
-                <PersonOutlinedIcon />
+                {/* <PersonOutlinedIcon />
                 <EmailOutlinedIcon />
-                <NotificationsOutlinedIcon />
+                <NotificationsOutlinedIcon /> */}
+                <Link to={`/profile/${user?.id}`} style={{textDecoration:"none"}}>
                 <div className="user">
                     <img
                         src={currentUser.profilePic}
                         alt=""
                     />
-                    <span>{currentUser.name}</span>
+                    <span style={{color:"#0000cc"}}>{currentUser.name}</span>
                 </div>
+                </Link>
             </div>
         </div>
     );

@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
+
+
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
@@ -7,15 +9,24 @@ export const AuthContextProvider = ({ children }) => {
         JSON.parse(localStorage.getItem("user")) || null
     );
 
-    const login = () => {
-        //TO DO
+    const login = (responseObj) => {
+
+        console.log( "email : " + responseObj.data.email);
         setCurrentUser({
-            id: 1,
-            name: "John Doe",
-            profilePic:
-                "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            id : responseObj.data._id,
+            username : responseObj.data.username,
+            name : responseObj.data.name,
+            email : responseObj.data.email,
+            profilePic: "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600"
         });
+
+
+
+    
     };
+
+    console.log(currentUser);
+    console.log(JSON.stringify(currentUser));
 
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(currentUser));
